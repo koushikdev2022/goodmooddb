@@ -80,6 +80,11 @@ module.exports = {
         allowNull: false,
         defaultValue:0
       },
+     is_verified: {
+        type: Sequelize.INTEGER,
+      allowNull: true,
+      defaultValue:0
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
