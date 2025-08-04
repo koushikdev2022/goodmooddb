@@ -24,10 +24,6 @@ module.exports = {
           type: Sequelize.DECIMAL(10, 2),
            allowNull: false,
       },
-      total_hour:{
-            type: Sequelize.INTEGER,
-           allowNull: false,
-      },
       status:{
         type: Sequelize.INTEGER,
         allowNull: true,

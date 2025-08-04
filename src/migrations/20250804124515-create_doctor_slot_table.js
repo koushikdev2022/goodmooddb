@@ -9,14 +9,14 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable('doctor_working_time', {
+     await queryInterface.createTable('doctor_slot', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      doctor_id:{
+      doctor_working_hour_id:{
           type: Sequelize.BIGINT,
            allowNull: false,
       },
@@ -25,19 +25,7 @@ module.exports = {
            allowNull: false,
       },
       end_time:{
-          type: Sequelize.TIME,
-           allowNull: false,
-      },
-      break_start_time:{
-          type: Sequelize.TIME,
-           allowNull: false,
-      },
-      break_end_time:{
-          type: Sequelize.TIME,
-           allowNull: false,
-      },
-      day_id:{
-           type: Sequelize.BIGINT,
+            type: Sequelize.TIME,
            allowNull: false,
       },
       status:{

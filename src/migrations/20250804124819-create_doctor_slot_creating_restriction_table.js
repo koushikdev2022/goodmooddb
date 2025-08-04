@@ -9,35 +9,19 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable('doctor_working_time', {
+    await queryInterface.createTable('doctor_slot_creating_restrictions', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      doctor_id:{
-          type: Sequelize.BIGINT,
-           allowNull: false,
-      },
-      start_time:{
+      slot_time:{
           type: Sequelize.TIME,
            allowNull: false,
       },
-      end_time:{
+      break_between_two_slot:{
           type: Sequelize.TIME,
-           allowNull: false,
-      },
-      break_start_time:{
-          type: Sequelize.TIME,
-           allowNull: false,
-      },
-      break_end_time:{
-          type: Sequelize.TIME,
-           allowNull: false,
-      },
-      day_id:{
-           type: Sequelize.BIGINT,
            allowNull: false,
       },
       status:{
