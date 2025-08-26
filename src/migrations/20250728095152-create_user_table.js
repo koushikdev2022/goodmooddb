@@ -2,7 +2,7 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     await queryInterface.createTable('users', {
       id: {
         allowNull: false,
@@ -10,80 +10,78 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-       f_name:{
-        type: Sequelize.STRING,
-        allowNull: false,
-      
-      },
-      l_name:{
-        type: Sequelize.STRING,
-        allowNull: false,
-      
-      },
-      username:{
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique:true,
-      },
-      email:{
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique:true,
-      },
-      password:{
-        type: Sequelize.STRING,
-        allowNull: false,
-     
-      },
-      mobile:{
-        type: Sequelize.STRING,
-        allowNull: true,
-     
-      },
-      avatar:{
-        type: Sequelize.STRING,
-        allowNull: true,
-      
-      },
-      otp:{
-        type: Sequelize.INTEGER,
-        allowNull: true,
-      
-      },
-      otp_expire:{
-        type: Sequelize.DATE,
-        allowNull: true,
- 
-      },
-      o_auth:{
+      f_name: {
         type: Sequelize.STRING,
         allowNull: true,
 
       },
-      oauth_provider:{
+      l_name: {
         type: Sequelize.STRING,
         allowNull: true,
-    
+
       },
-      parent_id:{
+      username: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
+      },
+      email: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      password: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      mobile: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
+      },
+      avatar: {
+        type: Sequelize.STRING,
+        allowNull: true,
+
+      },
+      otp: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+
+      },
+      otp_expire: {
+        type: Sequelize.DATE,
+        allowNull: true,
+
+      },
+      o_auth: {
+        type: Sequelize.STRING,
+        allowNull: true,
+
+      },
+      oauth_provider: {
+        type: Sequelize.STRING,
+        allowNull: true,
+
+      },
+      parent_id: {
         type: Sequelize.BIGINT,
         allowNull: false,
-        defaultValue:0
+        defaultValue: 0
       },
-      status:{
+      status: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        defaultValue:1
+        defaultValue: 1
       },
-      is_deleted:{
+      is_deleted: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        defaultValue:0
+        defaultValue: 0
       },
-     is_verified: {
+      is_verified: {
         type: Sequelize.INTEGER,
-      allowNull: true,
-      defaultValue:0
+        allowNull: true,
+        defaultValue: 0
       },
       created_at: {
         type: Sequelize.DATE,
@@ -99,7 +97,7 @@ module.exports = {
     });
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     /**
      * Add reverting commands here.
      *
